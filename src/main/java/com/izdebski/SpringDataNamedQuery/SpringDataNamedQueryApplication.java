@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort.Direction;
 
 import java.util.List;
 
@@ -22,18 +24,9 @@ public class SpringDataNamedQueryApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		getPersonsInfoByLastName();
-		getPersonsInfoByFirstNameAndEmail();
-	}
+		List<Person>list = peopleManagementService.findByLastName("Almadovar",
+				new PageRequest(0, 4, Direction.ASC, "firstName"));
 
-	private void getPersonsInfoByFirstNameAndEmail() {
-		List<Person> personList = peopleManagementService.getPersonsInfoByFirstNameAndEmail("Barry","barry.j2007@Gmail.com");
-		personList.forEach(System.out::println);
-
-	}
-
-	private void getPersonsInfoByLastName() {
-		List<Person> personList = peopleManagementService.getPersonsInfoByLastName("Murphy");
-		personList.forEach(System.out::println);
+		list.forEach(System.out::println);
 	}
 }

@@ -19,6 +19,9 @@ CREATE TABLE persons_table
   ENGINE = innoDB
   DEFAULT CHARACTER SET = utf8
 ;
-INSERT INTO person_table(creation_date, email, first_name, last_name)VALUES('2017/08/14 03:25:41', 'bean.s2018@yahoo.com', 'Pedro', 'Murphy');
-INSERT INTO person_table(creation_date, email, first_name, last_name)VALUES('2017/07/14 02:25:41', 'sean.s2017@yahoo.com', 'Patna', 'Murphy');
-INSERT INTO person_table(creation_date, email, first_name, last_name)VALUES('2017/08/14 03:25:41', 'barry.j2007@Gmail.com', 'Barry', 'Manoever');
+INSERT INTO persons_table(creation_date, email, first_name, last_name)VALUES('2017/08/14 03:25:41', 'bean.s2018@yahoo.com', 'Pedrito', 'Almadovar');
+INSERT INTO persons_table(creation_date, email, first_name, last_name)VALUES('2017/07/14 02:25:41', 'sean.s2017@yahoo.com', 'Patna', 'Almadovar');
+INSERT INTO persons_table(creation_date, email, first_name, last_name)VALUES('2017/08/14 03:25:41', 'barry.j2007@Gmail.com', 'Pedrito', 'Manoever');
+INSERT INTO persons_table(creation_date, email, first_name, last_name)VALUES('2017/08/14 03:25:41', 'bean.s2018@yahoo.com', 'Pedrito', 'Almadovar');
+INSERT INTO persons_table(creation_date, email, first_name, last_name)VALUES('2017/07/14 02:25:41', 'sean.s2017@yahoo.com', 'Patna', 'Murphy');
+INSERT INTO persons_table(creation_date, email, first_name, last_name)VALUES('2017/08/14 03:25:41', 'barry.j2007@Gmail.com', 'Pedrito', 'Almadovar');
